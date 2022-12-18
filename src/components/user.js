@@ -6,16 +6,29 @@ class User extends Component {
     salary: "Bilgi Yok",
     department: "Bilgi Yok"
   }
+  state = {
+    isVisible: false
+  }
+  // constructor(props){
+  //   super(props);
+
+  //   this.state = {
+  //     isVisible : false
+  //   }
+  // }
   render() {
     //Destructing
     const {name, department, salary} = this.props;
+    const {isVisible} = this.state;
     return (
       <div>
-        <ul>
+        {
+          isVisible ? <ul>
           <li>İsim : {name}</li>
           <li>Departman: {department}</li>
           <li>Maaş: {salary}</li>
-        </ul>
+        </ul> : null
+        }
       </div>
     )
   }
