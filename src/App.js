@@ -13,7 +13,7 @@ function App() {
       <h3>{test}</h3> */}
       <User 
       name = "Umut Ocak"
-      department = "Software"
+      // department = "Software"
       salary = "15453"
       />
 
